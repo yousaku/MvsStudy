@@ -1,0 +1,88 @@
+﻿@model hakutsuru.Models.PcInfo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PcInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IpAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IpAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Use)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Use)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModelNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModelNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PcName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PcName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remarks2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remarks2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
